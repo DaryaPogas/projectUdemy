@@ -114,12 +114,18 @@ console.log(resultArray)
 
 
 let data = [5, 10, 'Shopping', 20, 'Homework'];
-for (i = 0; i < data.length; i++){
-    if (typeof(data[i]) === 'string'){
-        data[i] = data[i] + ' done';
-    }
-    if (typeof(data[i]) === 'number') {
-        data[i] = 2 *data[i] ;
-    }
+// for (i = 0; i < data.length; i++){
+//     if (typeof(data[i]) === 'string'){
+//         data[i] = data[i] + ' done';
+//     }
+//     if (typeof(data[i]) === 'number') {
+//         data[i] = 2 *data[i] ;
+//     }
+// }
+// console.log (data)
+
+let dataInReverse = [];
+for (i = data.length - 1; i >= 0; i--){
+    dataInReverse.push(data[i]);
 }
-console.log (data)
+console.log(dataInReverse)
