@@ -129,3 +129,17 @@ for (i = data.length - 1; i >= 0; i--){
     dataInReverse.push(data[i]);
 }
 console.log(dataInReverse)
+
+
+const lines = 5;
+let result = '';
+for (i = 0; i < lines; i++) {
+    for (let j = 0; j < lines - i -1; j++){
+        result += ' ';
+    }
+    for (let j = 0; j < 2 * i + 1; j++){
+        result += '*';
+    }
+    result += '\n';
+}
+console.log(result)
