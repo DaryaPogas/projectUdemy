@@ -150,3 +150,58 @@ getCoupeNumber (33)
 getCoupeNumber (40)
 getCoupeNumber ('78')
 getCoupeNumber (4.6)
+
+
+function getTimeFromMinutes (minutes){
+    let hour = Math.floor(minutes/60);
+    let min = minutes - (hour * 60)
+    if (typeof(minutes) !== 'number' || minutes < 0 || minutes % 1 !== 0) {
+        console.log ('Произошла ошибка')
+        return;
+    }
+    if (hour === 1) {
+    console.log(`Это ${hour} час и ${min} минут`)
+    }
+    if (hour >= 2 && hour <= 4  ) {
+        console.log(`Это ${hour} часа и ${min} минут`)
+        }
+    if (hour >= 5 && hour <= 10  ) {
+        console.log(`Это ${hour} часов и ${min} минут`)
+        }
+}
+
+getTimeFromMinutes(125)
+getTimeFromMinutes(525)
+getTimeFromMinutes (60)
+getTimeFromMinutes(-80)
+
+
+function findMaxNumber (...numbers){
+    if (numbers.length < 4 || numbers.some( num => typeof num !== 'number')) {
+        console.log (0);
+    } else {
+    console.log (Math.max(...numbers))
+    };
+}
+
+findMaxNumber (10,20)
+findMaxNumber(1, 5, 6.6, 13)
+findMaxNumber (4,7,9,'34')
+
+function fibonacci (num) {
+    if (typeof(num) !== 'number' || num < 0 || num % 1 !== 0) {
+        console.log ('')
+        return
+    };
+    let arr = [0, 1];
+    for (let i = 2; i < num; i++){
+        arr [i] = arr[i -1] + arr [i - 2]
+    }
+    console.log (arr);
+}
+fibonacci (4);
+fibonacci('hfbh');
+fibonacci (5);
+fibonacci(0);
+fibonacci (9.7);
+fibonacci (3)
