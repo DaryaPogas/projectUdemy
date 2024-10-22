@@ -192,8 +192,8 @@ function repeat(parameter) {
      if (arr1.length !== arr2.length){
       return false
      }
-     for (let k = 0; k < arr1.length; k++){
-       if ( arr1[k] === arr2[k]){
+     for (let i = 0; i < arr1.length; i++){
+       if ( arr1[i] === arr2[i]){
         return true
        }
      } 
@@ -216,8 +216,8 @@ function repeat(parameter) {
   let numbers = [3, 4, 2 ,8];
   function calculateTotal(arr){
     let total = 0;
-    for (let f = 0; f < arr.length; f++){
-      total += arr[f];
+    for (let i = 0; i < arr.length; i++){
+      total += arr[i];
     }
     return total
   }
@@ -286,7 +286,10 @@ function repeat(parameter) {
     };
     console.log("Q12: ", makeSquares([2,5,8]));
 
-
+    function makeSquaresV2 (arr){
+      return arr.map((num) => Math.pow(num, 2))
+    };
+    console.log("Q12: ", makeSquaresV2([2,5,8]));
 
   // ---------- BONUS QUESTION / STRETCH GOAL ----------
   // Back in the old days, the early 2000s, this was a famous technical interview question. Write a function definition that takes NO parameters. The function will loop from 1 to 15 and return an array of numbers. While looping, the function will check if the current value in the loop is divisible by 3, by 5, or by both. If the current value in the loop is divisible by 3, the function will add the string "fizz" to an array. If the current value in the loop is divisible by 5, the function will add the string "buzz" to the array. If the current value in the loop is divisible by both, the function will add the value "fizzbuzz" to the array. If the number isn't divisible by 3, 5, OR both, it will add the number to the array.  The function will return the array of values.
@@ -297,4 +300,19 @@ function repeat(parameter) {
   //    BONUS: [1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz',11,'fizz',13,14,'fizzbuzz']
   
   // PUT YOUR CODE HERE
-  
+  function fizzBuzz (){
+    let arr = [];
+    for (let i = 1; i <= 15; i++){
+      if (i % 3 === 0 && i % 5 === 0){
+        arr.push(i + ' fizzbuzz')
+      } else if (i % 3 === 0){
+        arr.push(i + ' fizz')
+      } else if (i % 5 === 0){
+        arr.push(i + ' buzz')
+      } else {
+        arr.push(i)
+      }
+    } 
+    return arr;
+  }
+  console.log("BONUS: ", fizzBuzz());
