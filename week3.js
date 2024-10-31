@@ -29,7 +29,7 @@ myPet.animal = 'cat';
 
 myPet.isDog = function (){
     let speciesChecker = 'dog'
-    return speciesChecker === myPet.animal
+    return speciesChecker == myPet.animal
 }
 console.log ("Q4: ", myPet.isDog())
 
