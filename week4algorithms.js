@@ -54,12 +54,12 @@ function strangeSums (array){
    let sumZero = []; 
     for (let i = 0; i < array.length; i++){
         for (let j = i + 1; j < array.length; j++) {  
-            if ( array[i] + array[j] === 0) 
+            if ( array[i] + array[j] === 0) {
                  sumZero.push ([ array[i],  array[j]]); 
             }
         }
     }
-    return sumZero.length   
+    return sumZero.length
 };
 console.log (`Q4: input: [${q4TestArray}], output:`, strangeSums(q4TestArray));
 let q4TestArray2 = [100, 8, 1, -1, 5]
